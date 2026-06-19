@@ -1,0 +1,18 @@
+export const links = {
+  rhino: 'https://www.rhino3d.com/',
+  sketchup: 'https://www.sketchup.com/',
+  cloudCompare: 'https://www.cloudcompare.org/',
+  enscape: 'https://enscape3d.com/',
+  rayStudio: 'https://store.3dmakerpro.com/pages/raystudio',
+  makerPro: 'https://store.3dmakerpro.com/',
+  ravenMax: 'https://store.3dmakerpro.com/products/raven?variant=44701133013061',
+  ravenStandard: 'https://store.3dmakerpro.com/products/raven',
+  satLab: 'https://www.satlabgeo.com/',
+  sl9: 'https://www.satlabgeo.com/product/sl9-slam-rtk/',
+  cygnusLite: 'https://www.satlabgeo.com/product/cygnus-lite/',
+  satCr: 'https://www.satcr.com/',
+  geotecnologias: 'https://geotecnologias.net/',
+  tiendamia: 'https://www.tiendamia.com/',
+  lidarVideo: 'https://www.youtube.com/watch?v=dsBjuJ-zc6E',
+  makerProForum: 'https://forum.3dmakerpro.com/',
+}
