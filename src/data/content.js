@@ -60,13 +60,7 @@ export const officeUseCases = [
     desc: 'Contrastar el modelo de diseño con la realidad de obra. 2 cm de precisión es suficiente para confirmar si un respaldo de cama, un armario o una cocina encaja en el espacio real.',
     badge: { text: 'Raven: suficiente', variant: 'green' },
   },
-  {
-    icon: '🌊',
-    bg: '#E1F5EE',
-    title: 'Proyectos en Jacó',
-    desc: 'Cata y José pueden llevar el escáner al sitio sin técnico especializado. La interfaz de 3.9" y el flujo scan-and-go reducen la curva de aprendizaje frente a equipos topográficos.',
-    badge: { text: 'Raven: ventaja', variant: 'green' },
-  },
+ 
   {
     icon: '📐',
     bg: '#FAEEDA',
