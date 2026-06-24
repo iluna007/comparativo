@@ -16,8 +16,7 @@ export const navSections = [
   { id: 'roi', label: 'Retorno', num: '07' },
   { id: 'risks', label: 'Consideraciones', num: '08' },
   { id: 'conclusion', label: 'Conclusión', num: '09' },
-  { id: 'business', label: 'Modelos de negocio', num: '10' },
-  { id: 'financing', label: 'Propuesta NID · Iker', num: '11' },
+  { id: 'business', label: 'Modelos financieros posibles', num: '10' },
 ]
 
 export const introConcepts = [
@@ -338,7 +337,7 @@ export const risks = [
 export const businessModels = [
   {
     num: 'Escenario 1',
-    icon: '🏢',
+    icon: '1',
     iconBg: 'var(--teal-light)',
     title: 'La empresa compra el equipo',
     sub: 'NID es propietaria · uso interno con posibilidad de préstamo negociado',
@@ -354,13 +353,12 @@ export const businessModels = [
   },
   {
     num: 'Escenario 2',
-    icon: '🤝',
+    icon: '2',
     iconBg: 'var(--purple-light)',
     title: 'Modelo compartido',
     sub: 'Propiedad y uso repartidos entre NID e Iker · dos variantes posibles',
     variants: [
       { title: 'Variante A · Co-compra 50/50', desc: 'NID e Iker aportan la mitad cada uno. Se establece un calendario de prioridad: proyectos NID tienen preferencia; fuera de eso el equipo queda disponible para proyectos personales o trabajo externo. Costos de mantenimiento y garantía se dividen. Requiere acuerdo escrito.', bg: 'var(--purple-light)', accent: true, investment: 'Inversión Iker: ~$1,312–$2,389 USD / ₡596,960–₡1,086,895' },
-      { title: 'Variante B · Iker compra, NID paga por uso', desc: 'Iker es el propietario. Le cobra a NID una tarifa por proyecto (~$300–400 / ₡136,500–182,000 por escaneo base). Eso cubre la amortización del equipo con proyectos de la empresa. Fuera de esos proyectos, el uso es completamente libre para proyectos personales y clientes externos.', bg: 'var(--purple-light)', accent: true, investment: 'Inversión Iker: costo total del equipo según canal' },
     ],
     tags: [
       { text: '✓ Libertad total para proyectos personales', variant: 'green' },
@@ -368,13 +366,19 @@ export const businessModels = [
       { text: 'Requiere acuerdo claro de uso y responsabilidad', variant: 'gray' },
     ],
   },
+  {
+    num: 'Escenario 3',
+    icon: '3',
+    iconBg: 'var(--amber-light)',
+    title: 'Iker asume la inversión',
+    volumeDiagram: true,
+    tags: [
+      { text: '✓ Inversión inicial a cargo de Iker', variant: 'green' },
+      { text: '✓ NID garantiza un mínimo mensual', variant: 'green' },
+      { text: 'Tarifas decrecientes a mayor volumen escaneado', variant: 'gray' },
+    ],
+  },
 ]
-
-export const financingProposal = {
-  sectionNum: '11',
-  sectionLabel: 'Propuesta de acuerdo NID · Iker',
-  title: 'Iker asume la inversión ',
-}
 
 export const productCta = {
   name: 'Raven Max RTK',
