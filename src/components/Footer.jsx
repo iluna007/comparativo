@@ -25,13 +25,6 @@ export default function Footer() {
             Ver producto →
           </a>
         </div>
-        <p className="note page-footer__note">
-          Precios Raven: <ExternalLink href={links.makerPro}>store.3dmakerpro.com</ExternalLink> (junio 2026, en periodo de oferta).
-          Tiendamia: carrito activo junio 2026. Precios SL9 y Cygnus Lite: cotizaciones{' '}
-          <ExternalLink href={links.satCr}>SAT CR</ExternalLink> y{' '}
-          <ExternalLink href={links.geotecnologias}>Geotecnologias</ExternalLink>, ambas con IVA.
-          TC ₡455/USD (Banco General, 18 jun. 2026). Costos de importación directa son estimativos; verificar con agente aduanero.
-        </p>
       </Reveal>
     </footer>
   )

@@ -389,5 +389,3 @@ export const productCta = {
   note: '(precio en oferta, junio 2026)',
   url: 'https://store.3dmakerpro.com/products/raven?variant=44701133013061',
 }
-
-export const footerNote = 'Precios Raven: store.3dmakerpro.com (junio 2026, en periodo de oferta). Tiendamia: carrito activo junio 2026. Precios SL9 y Cygnus Lite: cotizaciones SAT CR (94-2026-01/02-JBP) y Geotecnologias (284-26-01-VMT), ambas con IVA. TC ₡455/USD (Banco General, 18 jun. 2026). Costos de importación directa son estimativos; verificar con agente aduanero.'
