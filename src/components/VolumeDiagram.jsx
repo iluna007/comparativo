@@ -234,13 +234,14 @@ export default function VolumeDiagram() {
           <span className="vd-note">NID garantiza un mínimo mensual — a mayor volumen, menor costo unitario.</span>
         </div>
 
-        <svg
-          viewBox={`0 0 ${SVG_W} ${SVG_H}`}
-          width="100%"
-          preserveAspectRatio="xMidYMid meet"
-          role="img"
-          aria-label="Diagrama de edificios mostrando precio por m³ para 4 tipos de proyecto"
-        >
+        <div className="vd-scroll">
+          <svg
+            viewBox={`0 0 ${SVG_W} ${SVG_H}`}
+            width="100%"
+            preserveAspectRatio="xMidYMid meet"
+            role="img"
+            aria-label="Diagrama de edificios mostrando precio por m³ para 4 tipos de proyecto"
+          >
           {[0, 40, 80, 120, 160].map((offset) => (
             <line
               key={offset}
@@ -269,7 +270,8 @@ export default function VolumeDiagram() {
           {TIERS.map((tier, i) => (
             <Building key={tier.label} tier={tier} x={positions[i]} />
           ))}
-        </svg>
+          </svg>
+        </div>
       </div>
     </Reveal>
   )
