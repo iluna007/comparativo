@@ -1,5 +1,13 @@
 import { Reveal } from './Navigation'
 
+const P = {
+  black: '#0d0d0d',
+  charcoal: '#1f2124',
+  mustard: '#c8a11e',
+  yellow: '#ffcf4b',
+  cream: '#f1f1ef',
+}
+
 const TIERS = [
   {
     label: 'Pequeño',
@@ -7,8 +15,9 @@ const TIERS = [
     volume: 500,
     price: 575,
     priceCRC: '¢265,175',
-    color: '#888780',
-    colorLight: '#f4f2ec',
+    color: P.charcoal,
+    colorLight: P.cream,
+    dark: true,
     floors: 3,
     width: 42,
   },
@@ -18,8 +27,8 @@ const TIERS = [
     volume: 1500,
     price: 750,
     priceCRC: '¢345,750',
-    color: '#bdbba8',
-    colorLight: '#f4f2ec',
+    color: P.mustard,
+    colorLight: P.cream,
     floors: 5,
     width: 56,
   },
@@ -29,8 +38,9 @@ const TIERS = [
     volume: 2700,
     price: 950,
     priceCRC: '¢437,950',
-    color: '#ba7517',
-    colorLight: '#faeeda',
+    color: P.yellow,
+    colorLight: P.cream,
+    bright: true,
     floors: 7,
     width: 70,
   },
@@ -40,8 +50,9 @@ const TIERS = [
     volume: 5000,
     price: 1100,
     priceCRC: '¢507,100',
-    color: '#1a1918',
-    colorLight: '#e0ded8',
+    color: P.black,
+    colorLight: P.yellow,
+    dark: true,
     floors: 10,
     width: 88,
   },
@@ -58,6 +69,9 @@ function Building({ tier, x }) {
   const h = tier.floors * FLOOR_H
   const y = BASE_Y - h
   const cx = x + tier.width / 2
+  const priceFill = tier.bright ? P.charcoal : tier.dark ? P.yellow : P.black
+  const badgeTextFill = tier.dark ? P.black : tier.bright ? P.charcoal : P.mustard
+  const windowFill = tier.dark ? P.yellow : P.cream
 
   const windows = []
   for (let f = 0; f < tier.floors; f++) {
@@ -72,7 +86,7 @@ function Building({ tier, x }) {
           width={7}
           height={7}
           rx={1}
-          fill={tier.color === '#1a1918' ? '#faeeda' : tier.colorLight}
+          fill={windowFill}
           opacity={0.9}
         />,
       )
@@ -109,7 +123,7 @@ function Building({ tier, x }) {
         fontFamily="'Fraunces', Georgia, serif"
         fontWeight="700"
         fontSize="15"
-        fill={tier.color === '#1a1918' ? '#1a1918' : tier.color}
+        fill={priceFill}
       >
         ${tier.price}
       </text>
@@ -120,7 +134,7 @@ function Building({ tier, x }) {
         fontFamily="'DM Sans', sans-serif"
         fontWeight="500"
         fontSize="10"
-        fill="#5f5e5a"
+        fill={P.charcoal}
       >
         {tier.priceCRC}
       </text>
@@ -139,7 +153,7 @@ function Building({ tier, x }) {
         fontFamily="'DM Sans', sans-serif"
         fontWeight="600"
         fontSize="10"
-        fill={tier.color === '#1a1918' ? '#6b4010' : tier.color}
+        fill={badgeTextFill}
       >
         ${perM3}/m³
       </text>
@@ -161,7 +175,7 @@ function Building({ tier, x }) {
         fontFamily="'DM Sans', sans-serif"
         fontWeight="600"
         fontSize="11"
-        fill="#1a1918"
+        fill={P.black}
       >
         {tier.label}
       </text>
@@ -171,7 +185,7 @@ function Building({ tier, x }) {
         textAnchor="middle"
         fontFamily="'DM Sans', sans-serif"
         fontSize="10"
-        fill="#888780"
+        fill={P.charcoal}
       >
         {tier.volume.toLocaleString()} m³
       </text>
@@ -181,7 +195,7 @@ function Building({ tier, x }) {
         textAnchor="middle"
         fontFamily="'DM Sans', sans-serif"
         fontSize="10"
-        fill="#888780"
+        fill={P.charcoal}
       >
         {tier.area}
       </text>
@@ -234,7 +248,7 @@ export default function VolumeDiagram() {
               y1={BASE_Y - offset}
               x2={SVG_W - startX + 8}
               y2={BASE_Y - offset}
-              stroke="#e0ded8"
+              stroke={P.cream}
               strokeWidth={0.5}
               strokeDasharray="3 4"
             />
@@ -243,13 +257,13 @@ export default function VolumeDiagram() {
           <path
             d={pathD}
             fill="none"
-            stroke="#ba7517"
+            stroke={P.mustard}
             strokeWidth={1.5}
             strokeDasharray="4 3"
             opacity={0.55}
           />
           {curvePoints.map((p, i) => (
-            <circle key={i} cx={p.cx} cy={p.cy} r={3} fill="#ba7517" opacity={0.65} />
+            <circle key={i} cx={p.cx} cy={p.cy} r={3} fill={P.mustard} opacity={0.65} />
           ))}
 
           {TIERS.map((tier, i) => (

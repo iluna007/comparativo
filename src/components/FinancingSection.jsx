@@ -8,7 +8,7 @@ export default function FinancingSection() {
   return (
     <section id="financing" className="section">
       <Reveal direction="left">
-        <div className="section-label">{sectionNum} · Propuesta de acuerdo NID · Iker</div>
+        <div className="section-label">{sectionNum} · Propuesta</div>
         <h2 className="section-title">{title}</h2>
       </Reveal>
 
