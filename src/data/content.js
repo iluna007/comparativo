@@ -354,11 +354,11 @@ export const businessModels = [
   {
     num: 'Escenario 2',
     icon: '2',
-    iconBg: 'var(--purple-light)',
+    iconBg: 'var(--teal-light)',
     title: 'Modelo compartido',
     sub: 'Propiedad y uso repartidos entre NID e Iker · dos variantes posibles',
     variants: [
-      { title: 'Variante A · Co-compra 50/50', desc: 'NID e Iker aportan la mitad cada uno. Se establece un calendario de prioridad: proyectos NID tienen preferencia; fuera de eso el equipo queda disponible para proyectos personales o trabajo externo. Costos de mantenimiento y garantía se dividen. Requiere acuerdo escrito.', bg: 'var(--purple-light)', accent: true, investment: 'Inversión Iker: ~$1,312–$2,389 USD / ₡596,960–₡1,086,895' },
+      { title: 'Variante A · Co-compra 50/50', desc: 'NID e Iker aportan la mitad cada uno. Se establece un calendario de prioridad: proyectos NID tienen preferencia; fuera de eso el equipo queda disponible para proyectos personales o trabajo externo. Costos de mantenimiento y garantía se dividen. Requiere acuerdo escrito.', bg: 'var(--teal-light)', accent: true, investment: 'Inversión Iker: ~$1,312–$2,389 USD / ₡596,960–₡1,086,895' },
     ],
     tags: [
       { text: '✓ Libertad total para proyectos personales', variant: 'green' },
