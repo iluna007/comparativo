@@ -17,6 +17,7 @@ export const navSections = [
   { id: 'risks', label: 'Consideraciones', num: '08' },
   { id: 'conclusion', label: 'Conclusión', num: '09' },
   { id: 'business', label: 'Modelos de negocio', num: '10' },
+  { id: 'financing', label: 'Propuesta NID · Iker', num: '11' },
 ]
 
 export const introConcepts = [
@@ -48,17 +49,17 @@ export const workflowSteps = [
 export const officeUseCases = [
   {
     icon: '🏗',
-    bg: '#EAF3DE',
+    bg: '#FAEEDA',
     title: 'As-built de interiores',
     desc: 'Levantar el estado real de una obra entregada por contratista: muros, vanos, columnas, toma corrientes, luminarias. El Raven genera una nube de puntos RGB completa en una sola pasada.',
-    badge: { text: 'Raven: suficiente', variant: 'green' },
+    badge: { text: 'Raven: suficiente', variant: 'amber' },
   },
   {
     icon: '📏',
-    bg: '#E6F1FB',
+    bg: '#F4F2EC',
     title: 'Verificación de diseño',
     desc: 'Contrastar el modelo de diseño con la realidad de obra. 2 cm de precisión es suficiente para confirmar si un respaldo de cama, un armario o una cocina encaja en el espacio real.',
-    badge: { text: 'Raven: suficiente', variant: 'green' },
+    badge: { text: 'Raven: suficiente', variant: 'amber' },
   },
  
   {
@@ -66,23 +67,23 @@ export const officeUseCases = [
     bg: '#FAEEDA',
     title: 'Diseño sobre geometría real',
     desc: 'Usar la nube de puntos como base de trabajo: trazar muros, niveles y vanos reales y desarrollar propuestas que respetan tolerancias, inclinaciones e irregularidades del sitio — sin asumir que el espacio es ortogonal. Mobiliario, cocinas y vanos se modelan en coordenadas reales.',
-    badge: { text: 'Raven: clave para NID', variant: 'green' },
+    badge: { text: 'Raven: clave para NID', variant: 'amber' },
     linkKeys: ['rhino', 'sketchup'],
   },
   {
     icon: '🖼',
-    bg: '#FCEBEB',
+    bg: '#F4F2EC',
     title: 'Render y visualización in situ',
     desc: 'Insertar mobiliario, materiales o renders dentro de la nube de puntos para ver cómo se comporta un objeto en el espacio real: escala, proporción, luz y relación con elementos existentes antes de producir o instalar.',
-    badge: { text: 'Gaussian Splatting + render', variant: 'green' },
+    badge: { text: 'Gaussian Splatting + render', variant: 'amber' },
     linkKeys: ['rayStudio', 'enscape', 'rhino'],
   },
   {
     icon: '🥽',
-    bg: '#E1F5EE',
+    bg: '#FAEEDA',
     title: 'Recorridos inmersivos y realidad virtual',
     desc: 'Navegar el espacio escaneado en visores 3D o cascos VR: la nube coloreada y el Gaussian Splatting del Raven vinculan el modelo digital con la percepción espacial real — útil para presentar a clientes, validar volumetrías o explorar alternativas in situ.',
-    badge: { text: 'Presentación · validación en obra', variant: 'green' },
+    badge: { text: 'Presentación · validación en obra', variant: 'amber' },
     linkKeys: ['rayStudio', 'cloudCompare'],
   },
 ]
@@ -90,10 +91,10 @@ export const officeUseCases = [
 export const personalUseCases = [
   {
     icon: '🎯',
-    bg: '#EEEDFE',
+    bg: '#F4F2EC',
     title: 'Proyectos personales',
     desc: 'Documentación espacial de viviendas, estudios propios o colaboraciones fuera de la oficina. Libertad para escanear en fines de semana o proyectos ajenos a NID, con exportación E57 y nubes coloreadas para modelado independiente.',
-    badge: { text: 'Raven Max RTK: ideal', variant: 'blue' },
+    badge: { text: 'Raven Max RTK: ideal', variant: 'amber' },
     linkKeys: ['rhino', 'sketchup', 'cloudCompare'],
   },
 ]
@@ -368,6 +369,12 @@ export const businessModels = [
     ],
   },
 ]
+
+export const financingProposal = {
+  sectionNum: '11',
+  sectionLabel: 'Propuesta de acuerdo NID · Iker',
+  title: 'Iker asume la inversión ',
+}
 
 export const productCta = {
   name: 'Raven Max RTK',

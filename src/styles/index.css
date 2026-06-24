@@ -1,21 +1,22 @@
-/* ── Design tokens ─────────────────────────────────── */
+/* ── Design tokens — amarillo · gris · negro ─────── */
 :root {
-  --teal: #1d9e75;
-  --teal-light: #e1f5ee;
-  --teal-dark: #085041;
-  --amber: #ba7517;
+  --teal: #ba7517;
+  --teal-light: #faeeda;
+  --teal-dark: #1a1918;
+  --amber: #d4a017;
   --amber-light: #faeeda;
+  --amber-dark: #6b4010;
   --gray-light: #f4f2ec;
   --gray-mid: #888780;
   --gray-dark: #2c2c2a;
-  --blue: #185fa5;
-  --blue-light: #e6f1fb;
-  --green: #3b6d11;
-  --green-light: #eaf3de;
+  --blue: #888780;
+  --blue-light: #f4f2ec;
+  --green: #6b4010;
+  --green-light: #faeeda;
   --red: #a32d2d;
   --red-light: #fcebeb;
-  --purple: #534ab7;
-  --purple-light: #eeedfe;
+  --purple: #2c2c2a;
+  --purple-light: #f4f2ec;
   --ink: #1a1918;
   --border: #e0ded8;
   --surface: #fafaf7;
@@ -24,9 +25,9 @@
   --nav-width: 220px;
   --content-max: 920px;
   --radius: 12px;
-  --shadow-sm: 0 1px 2px rgba(26, 25, 24, 0.04);
-  --shadow-md: 0 8px 32px rgba(26, 25, 24, 0.08);
-  --shadow-lg: 0 24px 64px rgba(8, 80, 65, 0.12);
+  --shadow-sm: 0 1px 2px rgba(26, 25, 24, 0.06);
+  --shadow-md: 0 8px 32px rgba(26, 25, 24, 0.1);
+  --shadow-lg: 0 24px 64px rgba(26, 25, 24, 0.14);
 }
 
 *,
@@ -47,7 +48,7 @@ body {
   font-size: 14px;
   color: var(--ink);
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(29, 158, 117, 0.08), transparent),
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(186, 117, 23, 0.07), transparent),
     linear-gradient(180deg, #fff 0%, var(--surface) 100%);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -70,7 +71,7 @@ body {
 
 .scroll-progress__bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--teal-dark), var(--teal));
+  background: linear-gradient(90deg, var(--ink), var(--amber));
   transition: width 0.1s linear;
   border-radius: 0 2px 2px 0;
 }
@@ -188,7 +189,7 @@ body {
   color: var(--teal-dark);
   font-weight: 500;
   text-decoration: none;
-  border-bottom: 1px solid rgba(29, 158, 117, 0.35);
+  border-bottom: 1px solid rgba(186, 117, 23, 0.35);
   transition: color 0.2s, border-color 0.2s, gap 0.2s;
 }
 
@@ -341,7 +342,7 @@ p {
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 0.35rem;
-  background: linear-gradient(135deg, var(--ink) 0%, var(--teal-dark) 100%);
+  background: linear-gradient(135deg, var(--ink) 0%, var(--gray-dark) 55%, var(--amber-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -356,7 +357,7 @@ p {
 /* ── Intro hero ──────────────────────────────────── */
 .intro-hero {
   position: relative;
-  background: linear-gradient(135deg, #0d3d2e 0%, #085041 55%, #1d9e75 100%);
+  background: linear-gradient(135deg, #1a1918 0%, #2c2c2a 55%, #6b4010 100%);
   border-radius: 20px;
   padding: 2.25rem 2.5rem;
   margin-bottom: 1.75rem;
@@ -670,13 +671,13 @@ p {
 }
 
 .use-case-block--office {
-  background: linear-gradient(180deg, rgba(234, 243, 222, 0.35) 0%, transparent 100%);
-  border: 0.5px solid rgba(59, 109, 17, 0.12);
+  background: linear-gradient(180deg, rgba(250, 238, 218, 0.45) 0%, transparent 100%);
+  border: 0.5px solid rgba(186, 117, 23, 0.15);
 }
 
 .use-case-block--personal {
-  background: linear-gradient(180deg, rgba(238, 237, 254, 0.45) 0%, transparent 100%);
-  border: 0.5px solid rgba(83, 74, 183, 0.14);
+  background: linear-gradient(180deg, rgba(244, 242, 236, 0.6) 0%, transparent 100%);
+  border: 0.5px solid rgba(26, 25, 24, 0.1);
 }
 
 .use-case-block__header {
@@ -695,13 +696,13 @@ p {
 }
 
 .use-case-block__tag--office {
-  background: var(--green-light);
-  color: var(--green);
+  background: var(--amber-light);
+  color: var(--amber-dark);
 }
 
 .use-case-block__tag--personal {
-  background: var(--purple-light);
-  color: var(--purple);
+  background: var(--gray-light);
+  color: var(--gray-dark);
 }
 
 .use-case-block__title {
@@ -770,7 +771,7 @@ p {
 }
 
 .uc-card:hover {
-  border-color: rgba(29, 158, 117, 0.35);
+  border-color: rgba(186, 117, 23, 0.35);
   box-shadow: var(--shadow-sm);
 }
 
@@ -854,7 +855,7 @@ p {
 
 .prod-card.featured {
   border: 2px solid var(--teal);
-  box-shadow: 0 0 0 4px rgba(29, 158, 117, 0.08);
+  box-shadow: 0 0 0 4px rgba(186, 117, 23, 0.08);
 }
 
 .prod-card.budget {
@@ -1007,11 +1008,11 @@ p {
   border-bottom: none;
 }
 
-.col-raven { background: rgba(29, 158, 117, 0.04); }
+.col-raven { background: rgba(186, 117, 23, 0.04); }
 td.col-raven { border-left: 2px solid var(--teal); }
 th.col-raven {
   border-left: 2px solid var(--teal);
-  background: rgba(29, 158, 117, 0.09);
+  background: rgba(186, 117, 23, 0.09);
   color: var(--teal-dark);
 }
 
@@ -1065,7 +1066,7 @@ th.col-raven {
 
 .price-card.featured {
   border: 2px solid var(--teal);
-  box-shadow: 0 0 0 4px rgba(29, 158, 117, 0.08);
+  box-shadow: 0 0 0 4px rgba(186, 117, 23, 0.08);
 }
 
 .price-card.budget {
@@ -1302,7 +1303,7 @@ th.col-raven {
   background: linear-gradient(135deg, var(--teal-light) 0%, rgba(225, 245, 238, 0.6) 100%);
   border-radius: var(--radius);
   padding: 1.75rem 2rem;
-  border: 1px solid rgba(29, 158, 117, 0.15);
+  border: 1px solid rgba(186, 117, 23, 0.15);
 }
 
 .conclusion-box h2 {
@@ -1460,17 +1461,66 @@ th.col-raven {
   text-decoration: none;
   white-space: nowrap;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 14px rgba(29, 158, 117, 0.35);
+  box-shadow: 0 4px 14px rgba(186, 117, 23, 0.35);
 }
 
 .cta-btn:hover {
   background: var(--teal-dark);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(29, 158, 117, 0.4);
+  box-shadow: 0 6px 20px rgba(186, 117, 23, 0.4);
 }
 
 .page-footer__note {
   margin-top: 1.5rem;
+}
+
+/* ── Financing proposal ──────────────────────────── */
+.tiers-heading {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.tiers-sub {
+  font-size: 12px;
+  color: var(--gray-mid);
+  margin-bottom: 0;
+}
+
+.tiers-block {
+  margin-top: 0.5rem;
+}
+
+.tiers-block .vd-wrap {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+/* ── Volume Diagram ──────────────────────────────── */
+.vd-wrap {
+  background: var(--gray-light);
+  border-radius: var(--radius);
+  padding: 20px 16px 14px;
+  border: 0.5px solid var(--border);
+}
+
+.vd-header {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 12px;
+}
+
+.vd-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.vd-note {
+  font-size: 11px;
+  color: var(--gray-mid);
+  font-style: italic;
 }
 
 /* ── Mobile navigation ───────────────────────────── */

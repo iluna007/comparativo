@@ -10,6 +10,7 @@ import ImportSection from './components/ImportSection'
 import ROISection from './components/ROISection'
 import RisksSection, { ConclusionSection } from './components/RisksSection'
 import BusinessSection from './components/BusinessSection'
+import FinancingSection from './components/FinancingSection'
 import Footer from './components/Footer'
 import { useScrollProgress } from './hooks/useScrollReveal'
 
@@ -48,6 +49,8 @@ export default function App() {
           <ConclusionSection />
           <Divider />
           <BusinessSection />
+          <Divider />
+          <FinancingSection />
           <Footer />
         </main>
       </div>
